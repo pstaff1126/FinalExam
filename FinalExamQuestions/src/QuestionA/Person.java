@@ -6,7 +6,7 @@ import java.util.Date;
 /*
  * comment
  */
-public abstract class Person {
+public abstract class Person implements iPersonRead, iPersonWrite {
 
 	private Date DOB;
 	private String FirstName;
@@ -16,61 +16,33 @@ public abstract class Person {
 	private String phone_number;
 	private String email_address;
 
-	public String getFirstName() {
-		return FirstName;
-	}
+	public abstract String getFirstName();
 
-	public void setFirstName(String FirstName) {
-		this.FirstName = FirstName;
-	}
+	public abstract void setFirstName(String FirstName);
 
-	public String getMiddleName() {
-		return MiddleName;
-	}
+	public abstract String getMiddleName();
 
-	public void setMiddleName(String MiddleName) {
-		this.MiddleName = MiddleName;
-	}
+	public abstract void setMiddleName(String MiddleName);
 
-	public String getLastName() {
-		return LastName;
-	}
+	public abstract String getLastName();
 
-	public void setLastName(String LastName) {
-		this.LastName = LastName;
-	}
+	public abstract void setLastName(String LastName);
 
-	public Date getDOB() {
-		return DOB;
-	}
+	public abstract Date getDOB();
 
-	public void setDOB(Date DOB) {
-		this.DOB = DOB;
-	}
+	public abstract void setDOB(Date DOB);
 
-	public void setAddress(String newAddress) {
-		address = newAddress;
-	}
+	public abstract void setAddress(String newAddress);
 
-	public String getAddress() {
-		return address;
-	}
+	public abstract String getAddress();
 
-	public void setPhone(String newPhone_number) {
-		phone_number = newPhone_number;
-	}
+	public abstract void setPhone(String newPhone_number);
 
-	public String getPhone() {
-		return phone_number;
-	}
+	public abstract String getPhone();
 
-	public void setEmail(String newEmail) {
-		email_address = newEmail;
-	}
+	public abstract void setEmail(String newEmail);
 
-	public String getEmail() {
-		return email_address;
-	}
+	public abstract String getEmail();
 
 	/*
 	 * Constructors No Arg Constructor

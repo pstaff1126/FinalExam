@@ -30,15 +30,25 @@ public class Rectangle_Test {
 	public void Rectangle_Test1() {
 		
 		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+		try {
+			assertTrue(r2.ComputeArea() == 50);
+		} catch (IllegalRectangle e) {
+			
+			e.printStackTrace();
+		}
 	}
 	
 	@Test
 	public void Rectangle_Test2() {
 		
 	
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+		Rectangle r2 = new Rectangle(5, 10);
+		try {
+			assertTrue(r2.ComputeArea() == 50);
+		} catch (IllegalRectangle e) {
+			
+			e.printStackTrace();
+		}
 	}
 	
 
